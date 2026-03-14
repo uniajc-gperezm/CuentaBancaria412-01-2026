@@ -40,7 +40,7 @@ classDiagram
 
     Cuenta <|-- CuentaAhorros
     Cuenta <|-- CuentaCorriente
-    Main ..> CuentaAhorros : uses
+  
 ```
 
 
