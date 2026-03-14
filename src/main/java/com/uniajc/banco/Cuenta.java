@@ -1,4 +1,4 @@
-package com.uniajc;
+package com.uniajc.banco;
 
 public class Cuenta {
     
@@ -39,7 +39,7 @@ public class Cuenta {
 
     // Método para calcular el interés mensual de la cuenta y actualiza el saldo correspodiente.
     public void calcularInteres() {
-        float interesMensual = saldo * (tasaAnual/100)/12;
+        float interesMensual = saldo * (tasaAnual/12);
         saldo += interesMensual;
     }
 

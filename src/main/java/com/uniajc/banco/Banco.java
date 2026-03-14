@@ -1,9 +1,9 @@
-package com.uniajc;
+package com.uniajc.banco;
 
-public class Main {
+public class Banco {
 
     public static void main(String[] args) {
-        CuentaAhorro ca = new CuentaAhorro(50000, 12);
+        CuentaAhorro ca = new CuentaAhorro(50000, 0.12f);
 
         ca.consignar(20000);
         ca.consignar(10000);
