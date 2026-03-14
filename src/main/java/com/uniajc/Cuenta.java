@@ -1,33 +1,50 @@
 package com.uniajc;
 
 public class Cuenta {
-    
     protected float saldo;
-    protected int numeroConsignaciones;
-    protected int numeroRetiros;
+    protected int numeroConsignaciones=0;
+    protected int retiros=0;
     protected float tasaAnual;
-    protected float comisionMensual;
+    protected float comisionMensual=0;
 
-    public Cuenta(float saldo, float tasaAnual) {
+    Cuenta (float saldo,  float tasaaAnual  ){
         this.saldo = saldo;
         this.tasaAnual = tasaAnual;
+      
     }
 
-    public void consignar(float cantidad) {
+     public void consignar(float valor){
+        saldo = saldo + valor;
+        numeroConsignaciones = numeroConsignaciones + 1;
+     }
 
-    }
+     public void retirar(float valor){
+      if (valor <= saldo){
+        saldo = saldo - valor;
+        retiros = retiros + 1;
+        
+      }
+      else {
+        System.out.println("No se puede retirar, saldo insuficiente");
+      }
+     }
 
-    public void retirar(float cantidad) {
+     public void calcularinteres(){
+        float interesmensual = saldo * (tasaAnual/100)/12;
+        saldo = saldo + interesmensual;
+     }  
 
-    }
+     public void extractomensual(){
+        calcularinteres();
+        saldo = saldo - comisionMensual;
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Numero de consignaciones: " + numeroConsignaciones);
+        System.out.println("Numero de retiros: " + retiros);
+     }  
 
-    public void calcularInteres() {
-
-    }
-
-    public void extractoMensual() {
-
-    }
-    
-
+     public void imprimir(){
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Numero de consignaciones: " + numeroConsignaciones);
+        System.out.println("Numero de retiros: " + retiros);
+     }
 }
