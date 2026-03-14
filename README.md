@@ -37,9 +37,6 @@ classDiagram
         + void imprimir()
     }
 
-    class Main {
-        + static void main(String[] args)
-    }
 
     Cuenta <|-- CuentaAhorros
     Cuenta <|-- CuentaCorriente
