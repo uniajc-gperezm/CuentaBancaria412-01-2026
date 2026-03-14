@@ -4,40 +4,47 @@ public class CuentaAhorro extends Cuenta {
 
     protected boolean activa;
 
-    final String MENSAJE_CUENTA_INACTIVA = "La cuenta no está activa.";
+    public CuentaAhorro(float saldo, float tasa_anual) {
+        super(saldo, tasa_anual);
+        this.activa = saldo >= 10000;
+    }
 
-    public CuentaAhorro(float saldo, float tasaAnual) {
-        super(saldo, tasaAnual);
-        if (saldo < 10000) {
-            activa = false;
+    public void verificarEstado() {
+        if (this.getSaldo() < 10000) {
+            this.activa = false;
         } else {
-            activa = true;
+            this.activa = true;
         }
     }
 
-    public void consignar(float cantidad) {
-        if (activa) {
-            super.consignar(cantidad);
+    public boolean isInactiva() {
+        return !this.activa;
+    }
+
+    public void ejecutarOperacion() {
+        if (!isInactiva()) {
+            super.consignar(2000);
+            super.retirar(1000);
+            super.calcular_interes();
+            if (num_retiros > 4) {
+                this.saldo -= 1000;
+                this.num_retiros++;
+                System.out.println("nuevo saldo: " + this.saldo);
+                super.extracto_mensual();
+            } else {
+                System.out.println("Numero de retiros: " + this.num_retiros);
+            }
         } else {
-            System.out.println(MENSAJE_CUENTA_INACTIVA);
+            System.out.println("La cuenta está inactiva, no se puede operar.");
         }
     }
 
-    public void retirar(float cantidad) {
-        if (activa) {
-            super.retirar(cantidad);
-        } else {
-            System.out.println(MENSAJE_CUENTA_INACTIVA);
-        }
+    public void imprimir2() {
+        System.out.println("\n" + "Valores de los atributos de la clase cuentaAhorros:");
+        System.out.println("Saldo Total: " + this.getSaldo());
+        System.out.println("Comision mensual: " + this.comision_mensual);
+        System.out.println("Numero de transacciones: " + (this.num_consignaciones + this.num_retiros));
+        System.out.println("Estado de la cuenta: " + (isInactiva() ? "Inactiva" : "Activa"));
     }
 
-    public void extractoMensual() {
-        if (numeroRetiros > 4)   {
-            comisionMensual = numeroRetiros - 4;
-        }
-    }
-    
-    public void imprimir() {
-        
-    }
 }
