@@ -14,19 +14,25 @@ public class Cuenta {
     }
 
     public void consignar(float cantidad) {
-
+        saldo += cantidad;
     }
 
     public void retirar(float cantidad) {
-
+        if (saldo < cantidad) {
+            System.out.println("No se puede retirar la cantidad solicitada su saldo disponible es: " + saldo);
+            return;
+        }
+        saldo -= cantidad;
     }
 
     public void calcularInteres() {
-
+        float interesMensual = saldo * (tasaAnual / 12);
+        saldo += interesMensual;
     }
 
     public void extractoMensual() {
-
+        calcularInteres();
+        saldo -= comisionMensual;
     }
     
 
