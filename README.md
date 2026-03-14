@@ -21,9 +21,9 @@ classDiagram
         + extractoMensual()void
         + imprimir()void
     }
-    class CuentaAhorros {
+    class CuentaAhorro {
         # activa: boolean
-        «constructor» + CuentaAhorros(float saldo, float tasa)
+        «constructor» + CuentaAhorro(float saldo, float tasa)
         + consignar(float cantidad)void
         + retirar(float cantidad)void
         + extractoMensual()void
@@ -37,6 +37,6 @@ classDiagram
         + extractoMensual()void
         + imprimir()void
     }
-    Cuenta <|-- CuentaAhorros
+    Cuenta <|-- CuentaAhorro
     Cuenta <|-- CuentaCorriente
 ```
