@@ -1,4 +1,4 @@
-package com.uniajc;
+package com.uniajc.banco;
 
 public class CuentaAhorro extends Cuenta {
 

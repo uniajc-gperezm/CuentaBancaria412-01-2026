@@ -1,7 +1,7 @@
-package com.uniajc;
+package com.uniajc.banco;
 
-public class Main {
+public class Banco {
     public static void main(String[] args) {
-        
+
     }
 }
