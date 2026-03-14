@@ -23,11 +23,14 @@ public class Cuenta {
             return;
         }
         saldo -= cantidad;
+        // numeroRetiros++;
+        numeroRetiros = numeroRetiros + 1;
     }
 
     public void calcularInteres() {
         float interesMensual = saldo * (tasaAnual / 12);
         saldo += interesMensual;
+        // saldo = saldo + interesMensual;
     }
 
     public void extractoMensual() {
