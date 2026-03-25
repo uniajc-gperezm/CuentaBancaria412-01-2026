@@ -1,0 +1,19 @@
+ublic class Main {
+    public static void main(String[] args) {
+        Equipo equipo = new Equipo("");
+
+        Velocista v = new Velocista();
+        Escalador e = new Escalador();
+        Contrarrelojista c = new Contrarrelojista(3, "Ana", 60);
+
+        equipo.añadirCiclista(v);
+        equipo.añadirCiclista(e);
+        equipo.añadirCiclista(c);
+
+        equipo.imprimirDatosEquipo();
+        equipo.listarNombresCiclistas();
+
+        System.out.println("\nDatos de un ciclista:");
+        equipo.imprimirDatosCiclistaPorId();
+    }
+}
