@@ -12,24 +12,25 @@ public class Equipo {
         this.pais = pais;
     }
 
+    // Método para calcular la suma de tiempos de sus ciclistas
+    public int calcularTiempoTotal() {
+        int total = 0;
+        for (Ciclista c : lista) {
+            total += c.getTiempo();
+        }
+        return total;
+    }
+
     public void agregar(Ciclista c) {
         lista.add(c);
     }
 
-    public void listar() {
-        System.out.println("Equipo: " + nombre + " (" + pais + ")");
-        for (Ciclista c : lista) {
-            System.out.println("- " + c.getNombre());
-        }
-    }
+    public String getNombre() { return nombre; }
 
-    public void buscar(int id) {
+    public void listar() {
+        System.out.println("Equipo: " + nombre + " (" + pais + ") | Tiempo Total: " + calcularTiempoTotal() + " min");
         for (Ciclista c : lista) {
-            if (c.getId() == id) {
-                c.mostrar();
-                return;
-            }
+            System.out.println("- " + c.getNombre() + " (" + c.getTiempo() + " min)");
         }
-        System.out.println("No existe ese ID.");
     }
 }
