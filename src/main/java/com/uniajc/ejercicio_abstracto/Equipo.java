@@ -73,6 +73,15 @@ public class Equipo {
         System.out.println("No existe un ciclista con id: " + id);
     }
 
+    public Ciclista buscarCiclistaPorId(int id) {
+        for (Ciclista ciclista : ciclistas) {
+            if (ciclista.getIdentificador() == id) {
+                return ciclista;
+            }
+        }
+        return null;
+    }
+
     private void actualizarTiempoTotalEquipo() {
         int total = 0;
         for (Ciclista ciclista : ciclistas) {

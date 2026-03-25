@@ -57,6 +57,8 @@ public class CarreraCiclistas {
         equipo4.anadirCiclista(new Escalador(11, "Sara", 3.7f, 10.8f));
         equipo4.anadirCiclista(new Contrarrelojista(12, "Julian", 71.6));
 
+        Equipo[] equipos = {equipo, equipo2, equipo3, equipo4};
+
         System.out.println("=== Datos del equipo ===");
         equipo.imprimirDatosEquipo();
         System.out.println();
@@ -93,5 +95,53 @@ public class CarreraCiclistas {
             System.out.println("Equipo no encontrado");
         }
 
+  System.out.println("\n=== BUSCAR CICLISTA POR ID EN TODOS LOS EQUIPOS ===");
+
+int idBuscado = 2; // puedes cambiar este número
+
+boolean encontrado = false;
+
+// Buscar en equipo 1
+Ciclista c = equipo.buscarCiclistaPorId(idBuscado);
+if (c != null) {
+    c.imprimirDatos();
+    System.out.println("Equipo: " + equipo.getNombreEquipo());
+    encontrado = true;
+}
+
+// Buscar en equipo 2
+if (!encontrado) {
+    c = equipo2.buscarCiclistaPorId(idBuscado);
+    if (c != null) {
+        c.imprimirDatos();
+        System.out.println("Equipo: " + equipo2.getNombreEquipo());
+        encontrado = true;
     }
+}
+
+// Buscar en equipo 3
+if (!encontrado) {
+    c = equipo3.buscarCiclistaPorId(idBuscado);
+    if (c != null) {
+        c.imprimirDatos();
+        System.out.println("Equipo: " + equipo3.getNombreEquipo());
+        encontrado = true;
+    }
+}
+
+// Buscar en equipo 4
+if (!encontrado) {
+    c = equipo4.buscarCiclistaPorId(idBuscado);
+    if (c != null) {
+        c.imprimirDatos();
+        System.out.println("Equipo: " + equipo4.getNombreEquipo());
+        encontrado = true;
+    }
+}
+
+// Si no se encontró
+if (!encontrado) {
+    System.out.println("No existe un ciclista con id: " + idBuscado);
+}
+}
 }
