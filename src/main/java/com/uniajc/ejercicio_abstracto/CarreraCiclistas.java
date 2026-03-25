@@ -3,7 +3,7 @@ package com.uniajc.ejercicio_abstracto;
 public class CarreraCiclistas {
     public static void main(String[] args) {
 
-        // se crean los equipos 
+        // se crean los equipos  y se llenan los datos 
 
         Equipo equipo = new Equipo("Rayo Azul", "Colombia");
         Equipo equipo2 = new Equipo("Purple ", "España");
@@ -18,6 +18,24 @@ public class CarreraCiclistas {
 
         Contrarrelojista c1 = new Contrarrelojista(3, "Sofia", 72.0);
         c1.setTiempoAcumulado(128);
+
+        Velocista v2 = new Velocista(4, "Juan", 395.0, 63.8);
+        v2.setTiempoAcumulado(140);
+
+        Escalador e2 = new Escalador(5, "Laura", 3.6f, 11.2f);
+        e2.setTiempoAcumulado(142);
+
+        Contrarrelojista c2 = new Contrarrelojista(6, "Andres", 70.5);
+        c2.setTiempoAcumulado(133);
+
+        Velocista v3 = new Velocista(7, "Paula", 420.0, 66.1);
+        v3.setTiempoAcumulado(125);
+
+        Escalador e3 = new Escalador(8, "Diego", 3.9f, 12.9f);
+        e3.setTiempoAcumulado(138);
+
+        Contrarrelojista c3 = new Contrarrelojista(9, "Valentina", 73.2);
+        c3.setTiempoAcumulado(130);
         
           
  // lista de equipos 
@@ -26,6 +44,18 @@ public class CarreraCiclistas {
         equipo.anadirCiclista(v1);
         equipo.anadirCiclista(e1);
         equipo.anadirCiclista(c1);
+
+        equipo2.anadirCiclista(v2);
+        equipo2.anadirCiclista(e2);
+        equipo2.anadirCiclista(c2);
+
+        equipo3.anadirCiclista(v3);
+        equipo3.anadirCiclista(e3);
+        equipo3.anadirCiclista(c3);
+
+        equipo4.anadirCiclista(new Velocista(10, "Mateo", 405.0, 64.4));
+        equipo4.anadirCiclista(new Escalador(11, "Sara", 3.7f, 10.8f));
+        equipo4.anadirCiclista(new Contrarrelojista(12, "Julian", 71.6));
 
         System.out.println("=== Datos del equipo ===");
         equipo.imprimirDatosEquipo();
