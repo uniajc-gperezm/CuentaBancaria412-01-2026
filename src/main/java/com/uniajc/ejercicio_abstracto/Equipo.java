@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Equipo {
-    
+
     private String nombreEquipo;
     private String pais;
     private static int tiempoTotalEquipo = 0;
@@ -34,12 +34,12 @@ public class Equipo {
     protected int getTiempoTotalEquipo() {
         return tiempoTotalEquipo;
     }
-    
-    protected void setTiempoTotalEquipo(int tiempoTotalEquipo) { 
-        Equipo.tiempoTotalEquipo = tiempoTotalEquipo; 
+
+    protected void setTiempoTotalEquipo(int tiempoTotalEquipo) {
+        Equipo.tiempoTotalEquipo = tiempoTotalEquipo;
     }
 
-    // Métodos para gestionar ciclistas en el equipo
+    // ========== MÉTODOS ==========
     public void añadirCiclista(Ciclista ciclista) {
         ciclistas.add(ciclista);
         System.out.println("Ciclista " +ciclista.getNombre()+ " añadido al equipo.");
@@ -47,11 +47,11 @@ public class Equipo {
 
     public void imprimirDatosEquipo() {
         System.out.println("\n===== Datos del Equipo =====");
-        System.out.println("Nombre del equipo: " + nombreEquipo);
-        System.out.println("País: " + pais);
-        System.out.println("Total ciclistas: " + ciclistas.size());
+        System.out.println("Nombre del equipo: " +nombreEquipo);
+        System.out.println("País: " +pais);
+        System.out.println("Total ciclistas: " +ciclistas.size());
         calcularTiempoTotal();
-        System.out.println("Tiempo total del equipo: " + tiempoTotalEquipo + " min");
+        System.out.println("Tiempo total del equipo: " +tiempoTotalEquipo+ " min");
     }
 
     public void calcularTiempoTotal() {
@@ -62,7 +62,7 @@ public class Equipo {
     }
 
     public void listarNombresCiclistas() {
-        System.out.println("\n===== Ciclistas del equipo " + nombreEquipo + " =====");
+        System.out.println("\n===== Ciclistas del equipo " +nombreEquipo+ " =====");
         if(ciclistas.isEmpty()) {
             System.out.println("No hay ciclistas registrados.");
         } else {
@@ -72,20 +72,33 @@ public class Equipo {
         }
     }
 
-    public void imprimirDatosCiclistaPorId(int id) {
-        boolean encontrado = false;
-
+    public boolean imprimirDatosCiclistaPorId(int id) {
         for(Ciclista c : ciclistas) {
             if(c.getIdentificador() == id) {
                 System.out.println("\n===== Datos del Ciclista =====");
                 c.imprimirDatos();
-                encontrado = true;
-                break;
+                return true;
             }
         }
 
-        if(!encontrado) {
-            System.out.println("No existe un ciclista con el identificador " +id);
+        System.out.println("No existe un ciclista con el identificador " +id);
+        return false;
+    }
+
+    // Retorna la lista de ciclistas
+    public List<Ciclista> getCiclistas() {
+        return ciclistas;
+    }
+
+    // Ciclista con menor tiempo acumulado del equipo
+    public void imprimirCiclistaMasRapido() {
+        Ciclista masRapido = ciclistas.get(0);
+        for(int i = 1; i < ciclistas.size(); i++) {
+            if(ciclistas.get(i).getTiempoAcumulado() < masRapido.getTiempoAcumulado()) {
+                masRapido = ciclistas.get(i);
+            }
         }
+
+        System.out.println("Equipo " +nombreEquipo+ " → " +masRapido.getNombre()+ " | Tiempo: " +masRapido.getTiempoAcumulado()+ " min" + " | " +masRapido.imprimirTipo());
     }
 }
