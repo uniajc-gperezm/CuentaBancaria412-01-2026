@@ -1,9 +1,11 @@
 package com.uniajc.ejercicio_abstracto;
 
+import java.util.Scanner;
+
 public class CarreraCiclistas {
     public static void main(String[] args) {
 
-        // se crean los equipos  y se llenan los datos 
+        // se crean los equipos y se llenan los datos
 
         Equipo equipo = new Equipo("Rayo Azul", "Colombia");
         Equipo equipo2 = new Equipo("Purple ", "España");
@@ -36,10 +38,8 @@ public class CarreraCiclistas {
 
         Contrarrelojista c3 = new Contrarrelojista(9, "Valentina", 73.2);
         c3.setTiempoAcumulado(130);
-        
-          
- // lista de equipos 
 
+        // lista de equipos
 
         equipo.anadirCiclista(v1);
         equipo.anadirCiclista(e1);
@@ -57,7 +57,7 @@ public class CarreraCiclistas {
         equipo4.anadirCiclista(new Escalador(11, "Sara", 3.7f, 10.8f));
         equipo4.anadirCiclista(new Contrarrelojista(12, "Julian", 71.6));
 
-        Equipo[] equipos = {equipo, equipo2, equipo3, equipo4};
+        Equipo[] equipos = { equipo, equipo2, equipo3, equipo4 };
 
         System.out.println("=== Datos del equipo ===");
         equipo.imprimirDatosEquipo();
@@ -70,18 +70,19 @@ public class CarreraCiclistas {
         System.out.println("=== Datos de un ciclista por ID ===");
         equipo.imprimirDatosCiclistaPorId(2);
 
-//  Funcionalidades adicionales 
+        // Funcionalidades adicionales
 
- System.out.println("\n=== TODOS LOS EQUIPOS ===");
+        System.out.println("\n=== TODOS LOS EQUIPOS ===");
 
- equipo.imprimirDatosEquipo();
+        equipo.imprimirDatosEquipo();
         equipo2.imprimirDatosEquipo();
         equipo3.imprimirDatosEquipo();
         equipo4.imprimirDatosEquipo();
 
-
         System.out.println("\n=== BUSCAR EQUIPO POR NOMBRE ===");
-       String nombreBuscado = "ingrese el nombre del equipo";
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa el nombre del equipo: ");
+        String nombreBuscado = scanner.nextLine();
 
         if (equipo.getNombreEquipo().equalsIgnoreCase(nombreBuscado)) {
             equipo.imprimirDatosEquipo();
@@ -95,53 +96,53 @@ public class CarreraCiclistas {
             System.out.println("Equipo no encontrado");
         }
 
-  System.out.println("\n=== BUSCAR CICLISTA POR ID EN TODOS LOS EQUIPOS ===");
+        System.out.println("\n=== BUSCAR CICLISTA POR ID EN TODOS LOS EQUIPOS ===");
 
-int idBuscado = 2; // puedes cambiar este número
+        int idBuscado = 2; // puedes cambiar este número
 
-boolean encontrado = false;
+        boolean encontrado = false;
 
-// Buscar en equipo 1
-Ciclista c = equipo.buscarCiclistaPorId(idBuscado);
-if (c != null) {
-    c.imprimirDatos();
-    System.out.println("Equipo: " + equipo.getNombreEquipo());
-    encontrado = true;
-}
+        // Buscar en equipo 1
+        Ciclista c = equipo.buscarCiclistaPorId(idBuscado);
+        if (c != null) {
+            c.imprimirDatos();
+            System.out.println("Equipo: " + equipo.getNombreEquipo());
+            encontrado = true;
+        }
 
-// Buscar en equipo 2
-if (!encontrado) {
-    c = equipo2.buscarCiclistaPorId(idBuscado);
-    if (c != null) {
-        c.imprimirDatos();
-        System.out.println("Equipo: " + equipo2.getNombreEquipo());
-        encontrado = true;
+        // Buscar en equipo 2
+        if (!encontrado) {
+            c = equipo2.buscarCiclistaPorId(idBuscado);
+            if (c != null) {
+                c.imprimirDatos();
+                System.out.println("Equipo: " + equipo2.getNombreEquipo());
+                encontrado = true;
+            }
+        }
+
+        // Buscar en equipo 3
+        if (!encontrado) {
+            c = equipo3.buscarCiclistaPorId(idBuscado);
+            if (c != null) {
+                c.imprimirDatos();
+                System.out.println("Equipo: " + equipo3.getNombreEquipo());
+                encontrado = true;
+            }
+        }
+
+        // Buscar en equipo 4
+        if (!encontrado) {
+            c = equipo4.buscarCiclistaPorId(idBuscado);
+            if (c != null) {
+                c.imprimirDatos();
+                System.out.println("Equipo: " + equipo4.getNombreEquipo());
+                encontrado = true;
+            }
+        }
+
+        // Si no se encontró
+        if (!encontrado) {
+            System.out.println("No existe un ciclista con id: " + idBuscado);
+        }
     }
-}
-
-// Buscar en equipo 3
-if (!encontrado) {
-    c = equipo3.buscarCiclistaPorId(idBuscado);
-    if (c != null) {
-        c.imprimirDatos();
-        System.out.println("Equipo: " + equipo3.getNombreEquipo());
-        encontrado = true;
-    }
-}
-
-// Buscar en equipo 4
-if (!encontrado) {
-    c = equipo4.buscarCiclistaPorId(idBuscado);
-    if (c != null) {
-        c.imprimirDatos();
-        System.out.println("Equipo: " + equipo4.getNombreEquipo());
-        encontrado = true;
-    }
-}
-
-// Si no se encontró
-if (!encontrado) {
-    System.out.println("No existe un ciclista con id: " + idBuscado);
-}
-}
 }

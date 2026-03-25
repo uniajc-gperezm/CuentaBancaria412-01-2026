@@ -6,7 +6,7 @@ import java.util.List;
 public class Equipo {
     private String nombreEquipo;
     private String pais;
-    private static int tiempoTotalEquipo;
+    private int tiempoTotalEquipo;
     private List<Ciclista> ciclistas;
 
     public Equipo(String nombreEquipo, String pais) {
@@ -37,7 +37,7 @@ public class Equipo {
     }
 
     public void setTiempoTotalEquipo(int tiempoTotalEquipo) {
-        Equipo.tiempoTotalEquipo = tiempoTotalEquipo;
+        this.tiempoTotalEquipo = tiempoTotalEquipo;
     }
 
     public void anadirCiclista(Ciclista ciclista) {
