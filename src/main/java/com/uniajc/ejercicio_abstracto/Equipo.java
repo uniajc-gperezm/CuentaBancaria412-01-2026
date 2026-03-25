@@ -41,7 +41,7 @@ public class Equipo {
                 return;
             }
         }
-        System.out.println("Ciclista no encontrado");
+        System.out.println("Ciclista no se encuentra");
     }
 
     public void imprimirEquipo() {
