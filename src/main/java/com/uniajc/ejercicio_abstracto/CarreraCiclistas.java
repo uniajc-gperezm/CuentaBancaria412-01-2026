@@ -49,15 +49,15 @@ public class CarreraCiclistas {
 
 
         System.out.println("\n=== BUSCAR EQUIPO POR NOMBRE ===");
-       String nombreBuscado = "Rayo Azul";
+       String nombreBuscado = "ingrese el nombre del equipo";
 
-        if (equipo.getNombre().equalsIgnoreCase(nombreBuscado)) {
+        if (equipo.getNombreEquipo().equalsIgnoreCase(nombreBuscado)) {
             equipo.imprimirDatosEquipo();
-        } else if (equipo2.getNombre().equalsIgnoreCase(nombreBuscado)) {
+        } else if (equipo2.getNombreEquipo().equalsIgnoreCase(nombreBuscado)) {
             equipo2.imprimirDatosEquipo();
-        } else if (equipo3.getNombre().equalsIgnoreCase(nombreBuscado)) {
+        } else if (equipo3.getNombreEquipo().equalsIgnoreCase(nombreBuscado)) {
             equipo3.imprimirDatosEquipo();
-        } else if (equipo4.getNombre().equalsIgnoreCase(nombreBuscado)) {
+        } else if (equipo4.getNombreEquipo().equalsIgnoreCase(nombreBuscado)) {
             equipo4.imprimirDatosEquipo();
         } else {
             System.out.println("Equipo no encontrado");
