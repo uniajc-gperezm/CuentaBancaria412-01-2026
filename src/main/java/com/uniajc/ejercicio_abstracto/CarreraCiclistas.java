@@ -4,7 +4,7 @@ public class CarreraCiclistas {
     public static void main(String[] args) {
 
         // se crean los equipos 
-        
+
         Equipo equipo = new Equipo("Rayo Azul", "Colombia");
         Equipo equipo2 = new Equipo("Purple ", "España");
         Equipo equipo3 = new Equipo("Amercica ", "Colombia");
@@ -20,8 +20,7 @@ public class CarreraCiclistas {
         c1.setTiempoAcumulado(128);
         
           
-          
-
+ // lista de equipos 
 
 
         equipo.anadirCiclista(v1);
@@ -38,5 +37,31 @@ public class CarreraCiclistas {
 
         System.out.println("=== Datos de un ciclista por ID ===");
         equipo.imprimirDatosCiclistaPorId(2);
+
+//  Funcionalidades adicionales 
+
+ System.out.println("\n=== TODOS LOS EQUIPOS ===");
+
+ equipo.imprimirDatosEquipo();
+        equipo2.imprimirDatosEquipo();
+        equipo3.imprimirDatosEquipo();
+        equipo4.imprimirDatosEquipo();
+
+
+        System.out.println("\n=== BUSCAR EQUIPO POR NOMBRE ===");
+       String nombreBuscado = "Rayo Azul";
+
+        if (equipo.getNombre().equalsIgnoreCase(nombreBuscado)) {
+            equipo.imprimirDatosEquipo();
+        } else if (equipo2.getNombre().equalsIgnoreCase(nombreBuscado)) {
+            equipo2.imprimirDatosEquipo();
+        } else if (equipo3.getNombre().equalsIgnoreCase(nombreBuscado)) {
+            equipo3.imprimirDatosEquipo();
+        } else if (equipo4.getNombre().equalsIgnoreCase(nombreBuscado)) {
+            equipo4.imprimirDatosEquipo();
+        } else {
+            System.out.println("Equipo no encontrado");
+        }
+
     }
 }
