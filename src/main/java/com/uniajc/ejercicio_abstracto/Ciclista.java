@@ -1,22 +1,22 @@
 package com.uniajc.ejercicio_abstracto;
 
 public abstract class Ciclista {
-    protected int identificador;
+    protected int id;
     protected String nombre;
     protected int tiempoAcumulado;
 
     public Ciclista(int id, String nombre) {
-        this.identificador = id;
+        this.id = id;
         this.nombre = nombre;
         this.tiempoAcumulado = 0;
     }
 
-    public int getIdentificador() {
-        return identificador;
+    public int getId() {
+        return id;
     }
 
-    public void setIdentificador(int identificador) {
-        this.identificador = identificador;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -38,7 +38,7 @@ public abstract class Ciclista {
     public abstract String imprimirTipo();
 
     public void imprimirDatos() {
-        System.out.println("Identificador: " + identificador);
+        System.out.println("ID: " + id);
         System.out.println("Nombre: " + nombre);
         System.out.println("Tiempo acumulado: " + tiempoAcumulado);
     }
