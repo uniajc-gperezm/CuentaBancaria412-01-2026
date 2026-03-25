@@ -3,13 +3,13 @@ package com.uniajc.ejercicio_abstracto;
 public class CarreraCiclistas {
     public static void main(String[] args) {
 
-        equipo equipo1 = new equipo("Equipo A", "Colombia");
-        equipo equipo2 = new equipo("Equipo B", "España");
+        Equipo equipo1 = new Equipo("Equipo A", "Colombia");
+        Equipo equipo2 = new Equipo("Equipo B", "España");
 
-        ciclista ciclista1 = new escalador(1, "Ciclista 1", 120, 3.5f, 8.0f);
-        ciclista ciclista2 = new velocista(2, "Ciclista 2", 110, 400.0, 60.0);
-        ciclista ciclista3 = new escalador(3, "Ciclista 3", 130, 3.0f, 10.0f);
-        ciclista ciclista4 = new velocista(4, "Ciclista 4", 115, 450.0, 65.0);
+        Ciclista ciclista1 = new Escalador(1, "Ciclista 1", 120, 3.5f, 8.0f);
+        Ciclista ciclista2 = new Velocista(2, "Ciclista 2", 110, 400.0, 60.0);
+        Ciclista ciclista3 = new Escalador(3, "Ciclista 3", 130, 3.0f, 10.0f);
+        Ciclista ciclista4 = new Velocista(4, "Ciclista 4", 115, 450.0, 65.0);
 
         equipo1.agregarCiclista(ciclista1);
         equipo1.agregarCiclista(ciclista2);
@@ -22,5 +22,17 @@ public class CarreraCiclistas {
         System.out.println("\nInformación del Equipo 2:");
         equipo2.imprimirEquipo();
        
+    
+    System.out.println("List<a de ciclistas:");
+    equipo1.listarNombresCiclistas();
+     
+    System.out.println("ingrese el identificador del ciclista a buscar:");
+    equipo1.buscarCiclistaPorIdentificador();
+    
+
+
+
+        
     }
+
 }
