@@ -31,13 +31,22 @@ public class CuentaAhorro extends Cuenta {
         }
     }
 
+    @Override
     public void extractoMensual() {
-        if (numeroRetiros > 4)   {
-            comisionMensual = numeroRetiros - 4;
+        if (numeroRetiros > 4) {
+            comisionMensual += (numeroRetiros - 4) * 1000; 
         }
+        super.extractoMensual();
+        activa = saldo >= 10000;
     }
-    
+
     public void imprimir() {
-        
+        System.out.println("Cuenta de Ahorros:");
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Número de consignaciones: " + numeroConsignaciones);
+        System.out.println("Número de retiros: " + numeroRetiros);
+        System.out.println("Tasa anual: " + tasaAnual);
+        System.out.println("Comisión mensual: " + comisionMensual);
+        System.out.println("Estado de la cuenta: " + (activa ? "Activa" : "Inactiva"));
     }
 }

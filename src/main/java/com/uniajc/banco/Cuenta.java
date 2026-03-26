@@ -19,24 +19,21 @@ public class Cuenta {
 
     public void retirar(float cantidad) {
         if (saldo < cantidad) {
-            System.out.println("No se puede retirar la cantidad solicitada su saldo disponible es: " + saldo);
+            System.out.println("No se puede retirar la cantidad solicitada. Su saldo disponible es: " + saldo);
             return;
         }
         saldo -= cantidad;
-        // numeroRetiros++;
-        numeroRetiros = numeroRetiros + 1;
+        numeroRetiros++;
     }
 
     public void calcularInteres() {
         float interesMensual = saldo * (tasaAnual / 12);
         saldo += interesMensual;
-        // saldo = saldo + interesMensual;
     }
 
-    public void extractoMensual() {
+    public void extractoMensual() { 
         calcularInteres();
         saldo -= comisionMensual;
+        System.out.println("Extracto mensual generado. Saldo actual: " + saldo);
     }
-    
-
 }
