@@ -26,6 +26,17 @@ public class Terrestre extends Vehiculo implements Motor {
 
     @Override
 
+    public void frenar(int velocidad) {
+
+        velocidadActual -= velocidad;
+
+        if (velocidadActual < 0) {
+            velocidadActual = 0;
+        }
+    }
+
+    @Override
+
     public int calcularRevolucionesMotor(int fuerza, int radio) {
 
         return (fuerza * radio);
