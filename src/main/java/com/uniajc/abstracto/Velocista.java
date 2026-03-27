@@ -13,7 +13,7 @@ public class Velocista extends Ciclista {
 
     @Override
     public String imprimirTipo() {
-        return "Es un Velocista";
+        return "Velocista";
     }
 
     @Override

@@ -13,7 +13,7 @@ public class Escalador extends Ciclista {
 
     @Override
     public String imprimirTipo() {
-        return "Es un Escalador";
+        return "Escalador";
     }
 
     @Override

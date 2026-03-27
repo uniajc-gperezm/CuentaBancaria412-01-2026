@@ -4,11 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-      Equipo equipo = new Equipo("Team Colombia", "Colombia");
+        Equipo equipo = new Equipo("Team Colombia", "Colombia");
 
-Velocista v = new Velocista(1, "Juan", 400, 60);
-Escalador e = new Escalador(2, "Carlos", 2.5f, 30);
-Contrarrelojista c = new Contrarrelojista(3, "Luis", 55);
+        Velocista v = new Velocista(1, "Juan", 400, 60);
+        Escalador e = new Escalador(2, "Carlos", 2.5f, 30);
+        Contrarrelojista c = new Contrarrelojista(3, "Luis", 55);
 
         v.setTiempoAcumulado(120);
         e.setTiempoAcumulado(150);
