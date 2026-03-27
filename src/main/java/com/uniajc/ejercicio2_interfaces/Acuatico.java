@@ -51,4 +51,13 @@ public class Acuatico extends Vehiculo implements Vela {
             System.out.println("El viento está adecuado para navegar.");
         }
     }
+
+    public void imprimir() {
+
+        super.imprimir();
+
+        System.out.println("Tipo de barco: " + tipo);
+
+        System.out.println("Capacidad: " + capacidadDePasajeros);
+    }
 }
