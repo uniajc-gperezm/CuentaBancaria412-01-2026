@@ -39,7 +39,7 @@ public class Equipo {
     }
 
     public void imprimirEquipo() {
-        System.out.println("Equipo: " + nombre);
+      System.out.println("Nombre del equipo: " + nombre);
         System.out.println("País: " + pais);
         System.out.println("Tiempo total: " + tiempoTotal);
     }
