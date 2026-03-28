@@ -1,4 +1,4 @@
-package com.uniajc.interfaces2;
+packagegit com.uniajc.interfaces2;
 
 public class MainAnimales {
 
