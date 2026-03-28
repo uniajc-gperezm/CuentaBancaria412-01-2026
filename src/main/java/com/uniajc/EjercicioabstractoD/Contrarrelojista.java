@@ -1,4 +1,4 @@
-package com.uniajc.abstracto;
+package com.uniajc.EjercicioabstractoD;
 
 public class Contrarrelojista extends Ciclista {
 
@@ -9,14 +9,18 @@ public class Contrarrelojista extends Ciclista {
         this.velocidadMaxima = velocidadMaxima;
     }
 
-    @Override
-    public String imprimirTipo() {
-        return "Contrarrelojista";
+    public double getVelocidadMaxima() {
+        return velocidadMaxima;
     }
 
     @Override
-    public void mostrarDatos() {
-        super.mostrarDatos();
-        System.out.println("Velocidad maxima: " + velocidadMaxima);
+    public String imprimirTipo() {
+        return "Es un Contrarrelojista";
+    }
+
+    @Override
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("Velocidad máxima: " + velocidadMaxima);
     }
 }

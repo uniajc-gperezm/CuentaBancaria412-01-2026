@@ -1,4 +1,4 @@
-package com.uniajc.abstracto;
+package com.uniajc.EjercicioabstractoD;
 
 public abstract class Ciclista {
 
@@ -24,13 +24,15 @@ public abstract class Ciclista {
         return tiempoAcumulado;
     }
 
-    public void setTiempoAcumulado(int tiempo) {
-        this.tiempoAcumulado = tiempo;
+    public void setTiempoAcumulado(int tiempoAcumulado) {
+        this.tiempoAcumulado = tiempoAcumulado;
+    }
+
+    public void imprimir() {
+        System.out.println("Identificador: " + identificador);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Tiempo acumulado: " + tiempoAcumulado);
     }
 
     public abstract String imprimirTipo();
-
-    public void mostrarDatos() {
-        System.out.println("Tipo: " + imprimirTipo());
-    }
 }
