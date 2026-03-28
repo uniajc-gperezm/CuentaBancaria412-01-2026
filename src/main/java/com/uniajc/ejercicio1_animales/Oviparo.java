@@ -4,5 +4,5 @@ public interface Oviparo {
 
     void ponerHuevos();
 
-   
+    String tipoReproduccion();
 }

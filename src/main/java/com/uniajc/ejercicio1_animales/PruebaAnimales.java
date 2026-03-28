@@ -7,14 +7,16 @@ public class PruebaAnimales {
         Ornitorrinco ornitorrinco = new Ornitorrinco();
 
         System.out.println("=== BALLENA ===");
-        System.out.println("Nombre: " + ballena.mostrarNombre());
+        System.out.println("Nombre común: " + ballena.getNombreComun());
         System.out.println("Tipo: " + ballena.tipoAnimal());
+        System.out.println("Hábitat: " + ballena.habitat());
         ballena.amamantarCrias();
 
         System.out.println("\n=== ORNITORRINCO ===");
-        System.out.println("Nombre: " + ornitorrinco.mostrarNombre());
+        System.out.println("Nombre común: " + ornitorrinco.getNombreComun());
         System.out.println("Tipo: " + ornitorrinco.tipoAnimal());
-        System.out.println("¿Es ovíparo?: " + ornitorrinco.esOviparo());
+        System.out.println("Tipo de reproducción: " + ornitorrinco.tipoReproduccion());
+        System.out.println("Hábitat: " + ornitorrinco.habitat());
         ornitorrinco.amamantarCrias();
         ornitorrinco.ponerHuevos();
 

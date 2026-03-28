@@ -2,6 +2,10 @@ package com.uniajc.ejercicio1_animales;
 
 public class Ornitorrinco extends Mamifero implements Oviparo {
 
+    public Ornitorrinco() {
+        this.nombreComun = "Ornitorrinco";
+    }
+
     @Override
     public void amamantarCrias() {
         System.out.println("El ornitorrinco amamanta a sus crías.");
@@ -13,14 +17,11 @@ public class Ornitorrinco extends Mamifero implements Oviparo {
     }
 
     @Override
-    public boolean esOviparo() {
-        return true;
+    public String tipoReproduccion() {
+        return "Ovíparo";
     }
 
-    @Override
-    public int cantidadHuevos() {
-        return 2;
+    public String habitat() {
+        return "Ríos y lagos";
     }
-
-   
 }
