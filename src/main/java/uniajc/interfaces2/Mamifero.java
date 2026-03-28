@@ -1,4 +1,4 @@
-package uniajc.interface2;
+package uniajc.interfaces2;
 
 public interface Mamifero {
 
