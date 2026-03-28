@@ -25,7 +25,8 @@ public abstract class Vehiculo {
     }
 
     public void imprimir() {
-        System.out.println("Velocidad actual: " + velocidadActual);
+       
+       System.out.println("Velocidad actual del vehiculo: " + velocidadActual);
         System.out.println("Velocidad maxima: " + velocidadMaxima);
     }
 }
