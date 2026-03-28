@@ -1,6 +1,7 @@
+
 package com.uniajc.interfaces2;
 
-public class Ornitorrinco extends Mamifero implements Oviparo {
+public class Ornitorrinco implements Mamifero, Oviparo {
 
     @Override
     public void amamantar() {

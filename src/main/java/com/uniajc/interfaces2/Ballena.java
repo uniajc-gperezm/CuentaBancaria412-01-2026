@@ -1,6 +1,6 @@
 package com.uniajc.interfaces2;
 
-public class Ballena extends Mamifero {
+public class Ballena implements Mamifero {
 
     @Override
     public void amamantar() {

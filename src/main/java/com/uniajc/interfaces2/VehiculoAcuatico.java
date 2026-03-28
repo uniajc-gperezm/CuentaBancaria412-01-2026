@@ -1,32 +1,25 @@
 package com.uniajc.interfaces2;
 
-public class VehiculoAcuatico extends Vehiculo implements Vela {
+public class VehiculoAcuatico implements Vehiculo, Vela {
 
-    private String tipo;
-    private int capacidad;
-
-    public VehiculoAcuatico(int velocidadMaxima, String tipo, int capacidad) {
-        super(velocidadMaxima);
-        this.tipo = tipo;
-        this.capacidad = capacidad;
-    }
+    private int velocidad = 0;
 
     @Override
-    public void recomendarVelocidad(int velocidadViento) {
-        if (velocidadViento > 80) {
-            velocidadActual = 0;
-            System.out.println("Viento muy fuerte, no se recomienda navegar");
-        } else if (velocidadViento < 10) {
-            System.out.println("Viento muy bajo, no se recomienda navegar");
-        } else {
-            System.out.println("Condiciones normales para navegar");
-        }
+    public void acelerar(int incremento) {
+        velocidad += incremento;
     }
 
     @Override
     public void imprimir() {
-        super.imprimir();
-        System.out.println("Tipo: " + tipo);
-        System.out.println("Capacidad: " + capacidad);
+        System.out.println("Velocidad: " + velocidad);
+    }
+
+    @Override
+    public void recomendarVelocidad(int viento) {
+        if (viento > 80) {
+            System.out.println("Viento muy fuerte, no navegar");
+        } else {
+            System.out.println("Navegación normal");
+        }
     }
 }

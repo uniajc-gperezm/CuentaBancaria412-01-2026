@@ -1,25 +1,21 @@
 package com.uniajc.interfaces2;
 
-public class VehiculoTerrestre extends Vehiculo implements Motor {
+public class VehiculoTerrestre implements Vehiculo, Motor {
 
-    private int numeroLlantas;
-    private String uso;
+    private int velocidad = 0;
 
-    public VehiculoTerrestre(int velocidadMaxima, int numeroLlantas, String uso) {
-        super(velocidadMaxima);
-        this.numeroLlantas = numeroLlantas;
-        this.uso = uso;
+    @Override
+    public void acelerar(int incremento) {
+        velocidad += incremento;
+    }
+
+    @Override
+    public void imprimir() {
+        System.out.println("Velocidad: " + velocidad);
     }
 
     @Override
     public int calcularRevolucionesMotor(int fuerza, int radio) {
         return fuerza * radio;
-    }
-
-    @Override
-    public void imprimir() {
-        super.imprimir();
-        System.out.println("Numero de llantas: " + numeroLlantas);
-        System.out.println("Uso: " + uso);
     }
 }
