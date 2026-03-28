@@ -1,4 +1,4 @@
-package uniajc.interfaces2;
+package com.uniajc.interfaces2;
 
 public class Ornitorrinco implements Mamifero, Oviparo {
 
