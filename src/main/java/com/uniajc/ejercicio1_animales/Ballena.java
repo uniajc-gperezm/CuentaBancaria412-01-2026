@@ -7,9 +7,5 @@ public class Ballena extends Mamifero {
         System.out.println("La ballena amamanta a sus crías.");
     }
 
-    public String mostrarNombre() {
-        return "Ballena";
-    }
-
    
 }

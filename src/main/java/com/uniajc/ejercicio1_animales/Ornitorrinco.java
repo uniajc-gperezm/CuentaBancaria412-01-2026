@@ -22,11 +22,5 @@ public class Ornitorrinco extends Mamifero implements Oviparo {
         return 2;
     }
 
-    public String mostrarNombre() {
-        return "Ornitorrinco";
-    }
-
-    public String habitat() {
-        return "Ríos y lagos";
-    }
+   
 }
