@@ -2,7 +2,7 @@ package com.uniajc.interfaces;
 
 import com.uniajc.interfaces.contratos.*;
 
-public class Empresa implements IEmpleado, IJefe, IProveedor {
+public class Empresa extends Persona implements IEmpleado, IJefe, IProveedor {
     @Override
     public void trabajar() {
         System.out.println("Trabajando en la empresa...");
