@@ -15,8 +15,8 @@ public class VehiculoAcuatico implements Vehiculo, Vela {
     }
 
     @Override
-    public void recomendarVelocidad(int viento) {
-        if (viento > 80) {
+    public void recomendarVelocidad(int velocidadViento) {
+        if (velocidadViento > 80) {
             System.out.println("Viento muy fuerte, no navegar");
         } else {
             System.out.println("Navegación normal");
