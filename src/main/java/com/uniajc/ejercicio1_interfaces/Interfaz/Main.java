@@ -1,7 +1,7 @@
 
-package ejercicio1_interfaces.Interfaz;
+package com.uniajc.ejercicio1_interfaces.Interfaz;
 
-import ejercicio1_interfaces.Ballena;
+import com.uniajc.ejercicio1_interfaces.Ballena;
 
 public class Main
 {

@@ -1,5 +1,5 @@
 
-package ejercicio1_interfaces;
+package com.uniajc.ejercicio1_interfaces;
 
 public class Ballena extends Mamifero 
 {

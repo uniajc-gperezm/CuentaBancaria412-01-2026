@@ -1,5 +1,5 @@
-package ejercicio2_interfaces;
-import ejercicio2_interfaces.Interfaces.Vela;
+package com.uniajc.ejercicio2_interfaces;
+import com.uniajc.ejercicio2_interfaces.Interfaces.Vela;
 
  public class Acuatico extends Vehiculo implements Vela 
  {

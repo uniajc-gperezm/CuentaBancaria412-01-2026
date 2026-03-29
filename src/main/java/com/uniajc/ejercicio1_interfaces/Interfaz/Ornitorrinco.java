@@ -1,6 +1,6 @@
 
-package ejercicio1_interfaces.Interfaz;
-import ejercicio1_interfaces.Mamifero;
+package com.uniajc.ejercicio1_interfaces.Interfaz;
+import com.uniajc.ejercicio1_interfaces.Mamifero;
 
 public class Ornitorrinco extends Mamifero implements Ovíparo
 {

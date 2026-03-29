@@ -1,5 +1,5 @@
 
-package ejercicio1_interfaces.Interfaz;
+package com.uniajc.ejercicio1_interfaces.Interfaz;
 
 public interface Ovíparo 
 {

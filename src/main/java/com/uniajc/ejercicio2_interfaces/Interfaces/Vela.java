@@ -1,4 +1,4 @@
-package ejercicio2_interfaces.Interfaces;
+package com.uniajc.ejercicio2_interfaces.Interfaces;
 
 public interface Vela 
 {

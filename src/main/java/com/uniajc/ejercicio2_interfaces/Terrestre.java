@@ -1,5 +1,5 @@
-package ejercicio2_interfaces;
-import  ejercicio2_interfaces.Interfaces.Motor;
+package com.uniajc.ejercicio2_interfaces;
+import com.uniajc.ejercicio2_interfaces.Interfaces.Motor;
 
 public class Terrestre extends Vehiculo implements Motor 
 {

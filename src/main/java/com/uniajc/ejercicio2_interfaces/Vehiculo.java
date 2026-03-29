@@ -1,4 +1,4 @@
-package ejercicio2_interfaces;
+package com.uniajc.ejercicio2_interfaces;
 
 public abstract class Vehiculo 
 {
