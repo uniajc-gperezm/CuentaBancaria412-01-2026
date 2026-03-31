@@ -6,3 +6,4 @@ public class Inmobiliaria {
     }
 
 }
+// commit abstracto

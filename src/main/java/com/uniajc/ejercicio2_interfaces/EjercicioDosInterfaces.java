@@ -5,3 +5,4 @@ public class EjercicioDosInterfaces {
 
     }
 }
+// commit abstracto
